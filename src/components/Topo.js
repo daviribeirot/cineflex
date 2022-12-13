@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export default function Topo() { 
-    return(
+export default function Topo() {
+    return (
         <Header>
-            <h1>CINEFLEX</h1>
+                <h1>CINEFLEX</h1>
         </Header>
     )
 }

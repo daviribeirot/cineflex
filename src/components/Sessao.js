@@ -7,7 +7,7 @@ export default function Sessao({ filme }) {
             <Titulo>
                 {filme.weekday} - {filme.date}
             </Titulo>
-            <Botoes>
+            <Botoes data-test="showtime">
                 {filme.showtimes.map((f) => (
                     <Link to={`/assentos/${f.id}`} key={f.id}>
                         <button>{f.name}</button>

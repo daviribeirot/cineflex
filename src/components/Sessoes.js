@@ -15,7 +15,8 @@ export default function Sessoes() {
         const promise = axios.get(URL)
         promise.then(res => setFilme(res.data));
         promise.catch(err => console.log(err.response.data))
-    }, [])
+    }, []);
+
 
     if (filme === undefined) {
         return <div>Carregando...</div>
@@ -27,12 +28,14 @@ export default function Sessoes() {
             <ListaHorarios>
                 {filme.days.map(f => (
                     <Sessao
+                        data-test="movie-day" 
                         filme={f}
                         key={f.id}
                     />
                 ))}
             </ListaHorarios>
-            <Footer posterURL={filme.posterURL} tittle={filme.tittle} />
+            <Footer posterURL={filme.posterURL} title={filme.title} />
+            
         </Container>
     )
 }

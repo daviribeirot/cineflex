@@ -24,6 +24,7 @@ export default function Filmes(){
             <ListaFilmes>
             {filmes.map(f => (
                     <Filme 
+                    data-test="movie"
                     key={f.id}
                     f={f}
                     />
